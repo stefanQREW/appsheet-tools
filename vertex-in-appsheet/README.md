@@ -2,8 +2,8 @@
 A series of AppsScript files that allow you to easily take advantage of varous Vertex AI models to interact with your AppSheet data and associated Google Drive files
 
 ## Vertex Endpoints Supported
-* Simple Text -> Text prompting
-* Visual Question Asking for Image -> Text prompting
+* Simple Text -> Text prompting - ```predictText(prompt)```
+* Visual Question Asking for Image -> Text prompting - ```predictVQA(prompt, path)```
 
 ## Usage Guide
 * Create a new AppsScript Project
@@ -12,7 +12,7 @@ A series of AppsScript files that allow you to easily take advantage of varous V
 * Create a Service Account with [Vertex AI User](https://cloud.google.com/vertex-ai/docs/general/access-control#aiplatform.user) role granted
 * Download the JSON Key
 * Update the constants.gs file with all relevant GCP, AppSheet, and Drive properties
-* Initialialize the script and Authorize by running the quickVQATest() function
+* Initialialize the script and Authorize by running the ``` quickVQATest()``` function
 * Connect to AppSheet using an AppsScript Task inside of a Bot
 
 ### Special Notes
