@@ -135,7 +135,7 @@ function predictText(prompt) {
  * @param {string} jdFileName Drive filePath to second file.
  * @param {string} jdFileFolder Drive ID for folder containing the Job Description file.
  * @param {string} prompt Text prompt for the model to reason with.
- * @retrun {string} the result of the model generation
+ * @return {string} the result of the model generation
  */
 function compareResumeAndJD(resumeFileName,resumeFileFolder, jdFileName, jdFileFolder) {
   //set VARS

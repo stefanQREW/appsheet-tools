@@ -40,8 +40,8 @@ function testMultiModal() {
   
   /**
    * Get a Drive File and return in Base64.
-   * @params {string} asFileName File name as provided by AppSheet
-   * @params {string} parentFolder Folder ID of the direct parent Folder that contains the File.
+   * @param {string} asFileName File name as provided by AppSheet
+   * @param {string} parentFolder Folder ID of the direct parent Folder that contains the File.
    * @return {string} Base64 file data 
    */
   function getFileFromDrive(asFileName, parentFolder = APP_FOLDER_ID) {
@@ -70,7 +70,7 @@ function testMultiModal() {
   
   /** 
    * Gets just the filename from the path (which should be unique to all files uploaded through AppSheet)
-   * @params {string} path File Name that may or may not include file path. 
+   * @param {string} path File Name that may or may not include file path. 
    * @return {string} the trailing file name
    */
   function parsePath(path = "st/rin/g") { 
