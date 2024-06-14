@@ -32,33 +32,48 @@ function quickVQATest() {
     return res
 }
 
-function getImageFromDrive(path) {
-    // Get the root folder (change this if you want to search a specific folder)
-    const rootFolder = DriveApp.getFolderById(APP_FOLDER_ID);
-    const fileName = parsePath(path)
+function testMultiModal() {
+    const res = compareResumeAndJD(TEST_MULTIMODAL_RESUME_FILE, TEST_MULTIMODAL_RESUME_FOLDER,TEST_MULTIMODAL_JD_FILE, TEST_MULTIMODAL_JD_FOLDER)
+    console.log(res)
+    return res
+  }
+  
+  /**
+   * Get a Drive File and return in Base64.
+   * @params {string} asFileName File name as provided by AppSheet
+   * @params {string} parentFolder Folder ID of the direct parent Folder that contains the File.
+   * @return {string} Base64 file data 
+   */
+  function getFileFromDrive(asFileName, parentFolder = APP_FOLDER_ID) {
+      // Pass in your own ID for the parentFolder if you want to target a different folder. Must be the direct parent of the file you want to pull. 
+    const rootFolder = DriveApp.getFolderById(parentFolder);
+    const fileName = parsePath(asFileName)
     // Search for files with names matching the partial path
     const files = rootFolder.searchFiles(`title contains "${fileName}"`);
-
+    
     // Check if any files were found
     if (files.hasNext()) {
-        const file = files.next();
-
-        // Get the file blob
-        const blob = file.getBlob();
-
-        // Encode the blob to base64 string
-        const encodedString = Utilities.base64Encode(blob.getBytes());
-
-        return encodedString;
+      const file = files.next();
+      
+      // Get the file blob
+      const blob = file.getBlob();
+      
+      // Encode the blob to base64 string
+      const encodedString = Utilities.base64Encode(blob.getBytes());
+      
+      return encodedString;
     } else {
-        // No file found, return an error message (optional)
-        return "File not found";
+      // No file found, return an error message (optional)
+      return "File not found";
     }
-}
-/** 
- * Gets just the filename from the path (which should be unique to all files uploaded through AppSheet)
- */
-function parsePath(path = "st/rin/g") {
+  }
+  
+  /** 
+   * Gets just the filename from the path (which should be unique to all files uploaded through AppSheet)
+   * @params {string} path File Name that may or may not include file path. 
+   * @return {string} the trailing file name
+   */
+  function parsePath(path = "st/rin/g") { 
     const splitPath = path.split("/")
-    return splitPath[splitPath.length - 1]
-}
+    return splitPath[splitPath.length-1]
+  }
