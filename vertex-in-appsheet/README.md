@@ -6,7 +6,7 @@ A series of AppsScript files that allow you to easily take advantage of various 
 * Visual Question Asking for Image -> Text prompting - ```predictVQA(prompt, path)```
 
 ## Usage Guide
-* Copy this [AI Scavenger Hunt Demo](https://www.appsheet.com/Template/AppDef?appName=AIScavengerHuntDEMO-4098054&utm_source=share_app_link) AppSheet App
+* Copy this [AI Scavenger Hunt Demo](https://www.appsheet.com/Template/AppDef?appName=AIScavengerHuntDEMO-4098054&utm_source=share_app_link) AppSheet App (save to AppSheet Database)
 * Create a new AppsScript Project
 * Copy in all files in this directory
 * Setup a GCP project with Vertex AI platform enabled (Enable all APIs)
