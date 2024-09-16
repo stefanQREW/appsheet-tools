@@ -9,7 +9,7 @@ A series of AppsScript files that allow you to easily take advantage of various 
 ## Usage Guide
 ### AI Scavenger Hunt - Visual Question Asking API
 This simple game app allows you to generate a list of objects (text-bison model) that you might find in a particular location you specify. Then the game asks you to find those items by taking a picture of them. The Visual Question Asking API is used to determine if the picture you took matches the object description. 
-* Copy this [AI Scavenger Hunt Demo](https://www.appsheet.com/Template/AppDef?appName=AIScavengerHuntDEMO-4098054&utm_source=share_app_link) AppSheet App
+* Copy this [AI Scavenger Hunt Demo](https://www.appsheet.com/Template/AppDef?appName=AIScavengerHuntDEMO-4098054&utm_source=share_app_link) AppSheet App (choose AppSheet Database as the Data Source)
 * Create a new AppsScript Project
 * Copy in all files in this directory
 * Setup a GCP project with Vertex AI platform enabled (Enable all APIs)
