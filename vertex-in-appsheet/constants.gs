@@ -33,3 +33,11 @@ const TEST_PROMT_DRIVE = {
 
 const TEST_PROMT_TEXT = `Number: 5
 Area: Hanger`
+
+// Multimodal Test Variables
+const TEST_MULTIMODAL_PROMPT = "Analyze this Resume against the Job Description provided. Return the following analysis items in JSON format: \nName\nPhone\nEmail\nScore: Return a numerical score of applicant's fitness for the role (1 being lowest and 10 being highest)\nSummary: A 30 word summary describing the applicant's fitness for the role and the most standout applicant attribute.\n\nHere is an example response format for a highly fit applicant:\n{\n  \"Name\": \"Jane Doe\",\n  \"Phone\": \"(555) 555-5555\",\n  \"Email\": \"jane.doe@email.com\",\n  \"Score\": 9,\n  \"Summary\": \"Jane Doe is a highly qualified candidate for the Entry-Level Software Engineer (Python) position. Her strong foundation in Python, Django, Flask, and Google Cloud Platform, coupled with her experience in machine learning, web development, and software engineering, makes her a strong match for the role. Her accomplishments, including a successful internship at XYZ Corporation and winning Stanford TreeHacks, highlight her technical prowess and teamwork abilities. Doe's commitment to open-source contributions and active engagement in online coding communities further demonstrate her passion for software development.\"\n}"
+
+const TEST_MULTIMODAL_RESUME_FOLDER = "1eYyKjVp8xW773nLKePDd7p8JwFMu21bT" // Google Drive folder ID where AppSheet saves the Resume Files
+const TEST_MULTIMODAL_JD_FOLDER = "1GYb4-n7aGZKVkG20N2Vshrhw52cWYauL" // Google Drive folder ID where AppSheet saves the Job Description Files
+const TEST_MULTIMODAL_RESUME_FILE = "6275f224-3226-4baa-bee1-2466da3377d3.File.205948.pdf" // example Resume File Name
+const TEST_MULTIMODAL_JD_FILE = "432c8d65-38ff-454f-8e72-3c3867bb0a97.Job Description File.193327.pdf" // example Job Description File Name

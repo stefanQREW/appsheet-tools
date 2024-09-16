@@ -1,9 +1,9 @@
 
 /**
  * Add a new Row to AppSheet
- * @param rows Array of row objects you want to add or update. object properties should match exactly your column names in AppSheet
- * @param table Name of the AppSheet table you want to target - mus URL encode if you have spaces or special characters. 
- * @returns Array of rows updated
+ * @param {Array[Object]} rows Array of row objects you want to add or update. object properties should match exactly your column names in AppSheet
+ * @param {string} table Name of the AppSheet table you want to target - mus URL encode if you have spaces or special characters. 
+ * @return {Array[Object]} Array of rows updated
  */
 function postAppSheet(rows, table) {
     var appsheet_url = "https://api.appsheet.com/api/v2/apps/"
